@@ -2,6 +2,12 @@
 <html>
 <head>
 	<style type="text/css">
+		.mapbgimg{
+			position: absolute;
+		}
+		canvas{
+			position: absolute;
+		}
 		.style{
 			width: 10;
 			height: 10;
@@ -14,8 +20,9 @@
 	</style>
 </head>
 <body>
-	<div>
-	<img src="Map-image.png">
+	<div class="mapbgimg">
+	<img src="mapbgimg.png">
+	</div>
 	<canvas id="myCanvas" width="1340px" height="690px" style="border:1px solid #d3d3d3">
 	</canvas>
 	<script type="text/javascript">
@@ -67,6 +74,6 @@
 		ctx.strokeStyle="blue";
 		ctx2.stroke();
 	</script>
-</div>
+
 </body>
 </html>
