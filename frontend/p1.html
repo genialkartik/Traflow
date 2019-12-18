@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		.style{
+			width: 10;
+			height: 10;
+			background-color: blue;
+		}
+		img{
+			height: 100%;
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<div>
+	<img src="Map-image.png">
+	<canvas id="myCanvas" width="1340px" height="690px" style="border:1px solid #d3d3d3">
+	</canvas>
+	<script type="text/javascript">
+		var c=document.getElementById("myCanvas");
+		var d=document.getElementById("myCanvas");
+		var ctx=c.getContext("2d");
+		var ctx2=d.getContext("2d");
+		ctx.beginPath();
+		ctx.lineWidth=10;
+		ctx.lineCap="square";
+		ctx.moveTo(0,250);
+		ctx.lineTo(400,250);
+		ctx.lineTo(400,10);
+		ctx.moveTo(400,250);
+		ctx.lineTo(400,590);
+		ctx.moveTo(400,500);
+		ctx.lineTo(700,500);
+		ctx.moveTo(400,100);
+		ctx.lineTo(700,100);
+		ctx.lineTo(700,10);
+		ctx.moveTo(700,100);
+		ctx.lineTo(700,590);
+		ctx.moveTo(700,100);
+		ctx.lineTo(950,100);
+		ctx.lineTo(950,10);
+		ctx.moveTo(950,100);
+		ctx.lineTo(950,590);
+		ctx.moveTo(950,100);
+		ctx.lineTo(1330,100);
+		ctx.moveTo(250,250);
+		ctx.lineTo(250,10);
+		ctx.lineTo(250,590);
+		ctx.moveTo(200,250);
+		ctx.lineTo(0,70);
+		ctx.strokeStyle="yellow";
+		ctx.stroke();
+		ctx2.beginPath();
+		ctx.rect(195,250,1,1);
+		ctx.rect(250,250,1,1);
+		ctx.rect(400,250,1,1);
+		ctx.rect(400,500,1,1);
+		ctx.rect(400,100,1,1);
+		ctx.rect(700,100,1,1);
+		ctx.rect(700,500,1,1);
+		ctx.rect(950,100,1,1);
+		ctx.rect(950,100,1,1);
+		//ctx.rect(4,250,1,1);
+		//ctx.rect(1330,100,1,1);
+		ctx.strokeStyle="blue";
+		ctx2.stroke();
+	</script>
+</div>
+</body>
+</html>
