@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>TRAFLOW</title>
+  </head>
+  <body>
+    <style media="screen">
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      .body-container{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: red;
+      }
+      .clickedposition{
+        position : absolute;
+        color: white;
+      }
+    </style>
+
+    <div class="body-container" id="bcid" onclick="cposition(event);">
+
+    </div>
+    <div class="clickedposition">
+      <h2>Clicked Positions</h2>
+      <div id="cpid">
+
+      </div>
+    </div>
+
+    <script>
+      var X, Y;
+      var cpid = document.getElementById("cpid");
+      function cposition(event){
+        cpid.innerHTML += "X: " + event.clientX + " Y: " + event.clientY + "<br>";
+      }
+    </script>
+  </body>
+</html>
