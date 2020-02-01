@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <title>Polyline on the Map</title>
+    <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+    <link rel="stylesheet" type="text/css" href="demo.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="../template.css" />
+    <script type="text/javascript" src='../test-credentials.js'></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+
+  </head>
+  <body id="markers-on-the-map">
+<style>
+
+#map {
+    width: 95%;
+    height: 450px;
+    background: grey;
+}
+
+#panel {
+    width: 100%;
+    height: 400px;
+}
+</style>
+    <div class="page-header">
+        <h1>Polyline on the Map</h1>
+        <p>Display a map highlighting a region or area</p>
+    </div>
+    <p>This example displays a line connecting the cities of <b>Dublin</b> <i>(53.3477�N, 6.2597�W)</i>, 
+      <b>London</b> <i>(51.5008�N, 0.1224�W)</i>, <b>Paris</b> <i>(48.8567�N, 2.3508�E)</i> and 
+      <b>Berlin</b> <i>(52.5166�N, 13.3833�E)</i> and displays it on the map.</p>
+    <div id="map"></div>
+    <h3>Code</h3>
+    <p>A polyline is created using the <code>H.map.Polyline</code> class, passing in an 
+      <code>H.geo.LineString</code> holding the points of the line. The look-and-feel of the polyline can be altered by adding the style parameter</p>
+    <script type="text/javascript" >
+/**
+ * Adds a polyline between Dublin, London, Paris and Berlin to the map
+ *
+ * @param  {H.Map} map      A HERE Map instance within the application
+ */
+function addPolylineToMap(map) {
+  var lineString = new H.geo.LineString();
+
+  lineString.pushPoint({lat:51.5077, lng:-0.1297});
+  lineString.pushPoint({lat:51.5008, lng:-0.1224});
+  lineString.pushPoint({lat:51.5067, lng:-0.1208});
+
+  map.addObject(new H.map.Polyline(
+    lineString, { style: { lineWidth: 4 }}
+  ));
+}
+
+/**
+ * Boilerplate map initialization code starts below:
+ */
+
+//Step 1: initialize communication with the platform
+// In your own code, replace variable window.apikey with your own apikey
+var platform = new H.service.Platform({
+  apikey: '_qP-gbdMu4PSWt7-nu9GhMnDGYiM3h342t5ltLdDnN0'
+});
+var defaultLayers = platform.createDefaultLayers();
+
+//Step 2: initialize a map - this map is centered over Europe
+var map = new H.Map(document.getElementById('map'),
+  defaultLayers.vector.normal.map,{
+  center: {lat:51.5, lng:-0.12},
+  zoom: 15,
+  pixelRatio: window.devicePixelRatio || 1
+});
+// add a resize listener to make sure that the map occupies the whole container
+window.addEventListener('resize', () => map.getViewPort().resize());
+
+//Step 3: make the map interactive
+// MapEvents enables the event system
+// Behavior implements default interactions for pan/zoom (also on mobile touch environments)
+var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+
+// Create the default UI components
+var ui = H.ui.UI.createDefault(map, defaultLayers);
+
+
+// Now use the map as required...
+addPolylineToMap(map);</script>
+
+
+    
+
+  </body>
+</html>
