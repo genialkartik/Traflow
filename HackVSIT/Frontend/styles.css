@@ -1,0 +1,208 @@
+.marker {
+  position: relative;
+  weight: 5px;
+  height: 40px;
+}
+.pt {
+  position: relative;
+  top: -45px;
+  color: white;
+}
+textarea {
+  height: 100px;
+}
+html {
+  background-color: rgb(41, 40, 40);
+}
+.point {
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  position: absolute;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#point1 {
+  left: 71px;
+  top: 106px;
+  background-color: red;
+}
+#point2 {
+  left: 71px;
+  top: 200px;
+}
+#point3 {
+  left: 71px;
+  top: 250px;
+}
+
+#point4 {
+  left: 71px;
+  top: 350px;
+}
+
+#point5 {
+  left: 71px;
+  top: 500px;
+}
+
+#point6 {
+  left: 71px;
+  top: 550px;
+}
+/* Lines on point 1 */
+
+#point11 {
+  left: 271px;
+  top: 106px;
+}
+
+#point12 {
+  left: 471px;
+  top: 106px;
+}
+
+#point13 {
+  left: 671px;
+  top: 106px;
+}
+
+#point14 {
+  left: 871px;
+  top: 106px;
+}
+
+#point15 {
+  left: 1071px;
+  top: 106px;
+}
+
+/* points on line 2  */
+
+#point21 {
+  left: 271px;
+  top: 200px;
+}
+#point22 {
+  left: 471px;
+  top: 200px;
+}
+
+#point23 {
+  left: 671px;
+  top: 200px;
+}
+
+#point24 {
+  left: 871px;
+  top: 200px;
+}
+
+#point25 {
+  left: 1071px;
+  top: 200px;
+}
+
+/*Lines of point 3*/
+
+#point31 {
+  left: 271px;
+  top: 250px;
+}
+#point32 {
+  left: 471px;
+  top: 250px;
+}
+
+#point33 {
+  left: 671px;
+  top: 250px;
+}
+
+#point34 {
+  left: 871px;
+  top: 250px;
+}
+
+#point35 {
+  left: 1071px;
+  top: 250px;
+}
+
+/*points  of lines 4 */
+
+#point41 {
+  left: 271px;
+  top: 350px;
+}
+#point42 {
+  left: 471px;
+  top: 350px;
+}
+
+#point43 {
+  left: 671px;
+  top: 350px;
+}
+
+#point44 {
+  left: 871px;
+  top: 350px;
+}
+
+#point45 {
+  left: 1071px;
+  top: 350px;
+}
+
+/*points lying in point 5*/
+
+#point51 {
+  left: 271px;
+  top: 500px;
+}
+#point52 {
+  left: 471px;
+  top: 500px;
+}
+
+#point53 {
+  left: 671px;
+  top: 500px;
+}
+
+#point54 {
+  left: 871px;
+  top: 500px;
+}
+
+#point55 {
+  left: 1071px;
+  top: 500px;
+}
+/*Points of line 6*/
+
+#point61 {
+  left: 271px;
+  top: 550px;
+}
+#point62 {
+  left: 471px;
+  top: 550px;
+}
+
+#point63 {
+  left: 671px;
+  top: 550px;
+}
+
+#point64 {
+  left: 871px;
+  top: 550px;
+}
+
+#point65 {
+  left: 1071px;
+  top: 550px;
+}
