@@ -1,1 +1,1 @@
-## Hack-VSIT
+## Hack VSIT
