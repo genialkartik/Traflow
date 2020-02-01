@@ -1,0 +1,249 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-widthinitial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./line.css" />
+    <script src="./data.js"></script>
+    <script src="./showcords.js"></script>
+    <script src="./createline.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="./algo.js"></script>
+    <script src="./animation.js"></script>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <button id="button12">Start</button>
+
+    <img
+      id="book"
+      src="car.png"
+      alt=""
+      width="30"
+      height="30"
+      style="position: absolute; left: 71px;top: 106px;"
+    />
+    <!-- starting  points of every line -->
+    <div class="point" id="point1">
+      <p class="pt"></p>
+    </div>
+    <div class="point" id="point2">
+      <p class="pt"></p>
+    </div>
+    <div class="point" id="point3">
+      <p class="pt"></p>
+    </div>
+
+    <div class="point" id="point4">
+      <p class="pt"></p>
+    </div>
+    <div class="point" id="point5">
+      <p class="pt"></p>
+    </div>
+    <div class="point" id="point6">
+      <p class="pt"></p>
+    </div>
+    <!-- Point in lines 1   -->
+    <div class="point" id="point11">
+      <p class="pt"></p>
+    </div>
+
+    <div class="point" id="point12">
+      <p class="pt"></p>
+    </div>
+    <div class="point" id="point13">
+      <p class="pt"></p>
+    </div>
+    <div class="point" id="point14">
+      <p class="pt"></p>
+    </div>
+    <div class="point" id="point15">
+      <p class="pt"></p>
+    </div>
+    <!-- Point in line 2  -->
+    <div class="point" id="point21">
+      <p class="pt"></p>
+    </div>
+    <div class="point" id="point22">
+      <p class="pt"></p>
+    </div>
+    <div class="point" id="point23">
+      <p class="pt"></p>
+    </div>
+    <div class="point" id="point24">
+      <p class="pt"></p>
+    </div>
+    <div class="point" id="point25">
+      <p class="pt"></p>
+    </div>
+    <!-- Point in line 3 -->
+
+    <div class="point" id="point31">
+      <p class="pt"></p>
+    </div>
+    <div class="point" id="point32">
+      <p class="pt"></p>
+    </div>
+    <div class="point" id="point33">
+      <p class="pt"></p>
+    </div>
+    <div class="point" id="point34">
+      <p class="pt"></p>
+    </div>
+    <div class="point" id="point35">
+      <p class="pt"></p>
+    </div>
+
+    <!-- Point in line 4-->
+
+    <div class="point" id="point41">
+      <p class="pt"></p>
+    </div>
+    <div class="point" id="point42">
+      <p class="pt"></p>
+    </div>
+
+    <div class="point" id="point43">
+      <p class="pt"></p>
+    </div>
+    <div class="point" id="point44">
+      <p class="pt"></p>
+    </div>
+    <div class="point" id="point45">
+      <p class="pt"></p>
+    </div>
+
+    <!-- Point in line 5  -->
+
+    <div class="point" id="point51">
+      <p class="pt"></p>
+    </div>
+    <div class="point" id="point52">
+      <p class="pt"></p>
+    </div>
+    <div class="point" id="point53">
+      <p class="pt"></p>
+    </div>
+    <div class="point" id="point54">
+      <p class="pt"></p>
+    </div>
+    <div class="point" id="point55">
+      <p class="pt">5</p>
+    </div>
+
+    <!-- Point in line 6  -->
+
+    <div class="point" id="point61">
+      <p class="pt"></p>
+    </div>
+    <div class="point" id="point62">
+      <p class="pt"></p>
+    </div>
+    <div class="point" id="point63">
+      <p class="pt">6</p>
+    </div>
+
+    <div class="point" id="point64">
+      <p class="pt"></p>
+    </div>
+    <div class="point" id="point65">
+      <p class="pt"></p>
+    </div>
+
+    <!--All the lines will be defined here-->
+    <div id="line12"><p>45</p></div>
+    <div id="line23"><p>20</p></div>
+    <div id="line34"><p>23</p></div>
+    <div id="line45"><p>20</p></div>
+    <div id="line56"><p>98</p></div>
+    <div id="line555"><p></p></div>
+    <div id="line665"><p></p></div>
+    <div id="line111"><p class="rot">87</p></div>
+    <div id="line221"><p class="rot">20</p></div>
+    <div id="line331"><p class="rot">21</p></div>
+    <div id="line441">
+      <p class="rot">25</p>
+    </div>
+    <div id="line551"><p class="rot">23</p></div>
+    <div id="line661"><p class="rot">65</p></div>
+
+    <div id="line1112"><p class="rot">20</p></div>
+    <div id="line2122"><p class="rot">23</p></div>
+    <div id="line3132"><p class="rot">20</p></div>
+    <div id="line4142"><p class="rot">20</p></div>
+    <div id="line5152"><p class="rot">20</p></div>
+    <div id="line6162"><p class="rot">21</p></div>
+
+    <div id="line1213">
+      <p class="rot">20</p>
+    </div>
+    <div id="line2223"><p class="rot">23</p></div>
+    <div id="line3233">
+      <p class="rot">20</p>
+    </div>
+    <div id="line4243">
+      <p class="rot">23</p>
+    </div>
+    <div id="line5253"><p class="rot">20</p></div>
+    <div id="line6263"><p class="rot">21</p></div>
+
+    <div id="line1314"><p class="rot">20</p></div>
+    <div id="line2324"><p class="rot">23</p></div>
+    <div id="line3334"><p class="rot">20</p></div>
+    <div id="line4344"><p class="rot">23</p></div>
+    <div id="line5354"><p class="rot">20</p></div>
+    <div id="line6364"><p class="rot">21</p></div>
+
+    <div id="line1415"><p class="rot">20</p></div>
+    <div id="line2425">
+      <p class="rot">21</p>
+    </div>
+    <div id="line3435"><p class="rot">20</p></div>
+    <div id="line4445"><p class="rot">23</p></div>
+    <div id="line5455">
+      <p class="rot">20</p>
+    </div>
+    <div id="line6465"><p class="rot">21</p></div>
+
+    <!--Now here we are going to go for somemore horizontal lines-->
+    <div id="line1121"><p>20</p></div>
+    <div id="line2131">
+      <p>21</p>
+    </div>
+    <div id="line3141"><p>25</p></div>
+    <div id="line4151"><p>23</p></div>
+    <div id="line5161"><p>23</p></div>
+
+    <div id="line1222"><p>20</p></div>
+    <div id="line2232">
+      <p>21</p>
+    </div>
+    <div id="line3242"><p>25</p></div>
+    <div id="line4252"><p>20</p></div>
+    <div id="line5262"><p>23</p></div>
+
+    <div id="line1323"><p>20</p></div>
+    <div id="line2333"><p>21</p></div>
+    <div id="line3343"><p>25</p></div>
+    <div id="line4353"><p>20</p></div>
+    <div id="line5363"><p>23</p></div>
+
+    <div id="line1424"><p>20</p></div>
+    <div id="line2434"><p>21</p></div>
+    <div id="line3444"><p>25</p></div>
+    <div id="line4454"><p>20</p></div>
+    <div id="line5464"><p>23</p></div>
+
+    <div id="line1525">
+      <p>20</p>
+    </div>
+    <div id="line2535"><p>20</p></div>
+    <div id="line3545"><p>23</p></div>
+    <div id="line4555"><p>21</p></div>
+    <div id="line5565"><p>20</p></div>
+
+    <script src="./linemaker.js"></script>
+  </body>
+</html>

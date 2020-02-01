@@ -1,0 +1,61 @@
+ // document.getElementById('A').innerHTML = 'This is &#13; some text';
+    /*$('img').animate({ left: '+=155px', top: '-=65px' }, 5000, function() {
+      //Script for movement from point 2,6
+
+      $('img').animate({ left: '+=223px', top: '+=192px' }, 5000, function() {
+        //Script for movement from point 6-8
+
+        $('img').animate({ left: '+=297px', top: '+=26px' }, 5000, function() {
+          //script for movement from point  8 to 9
+          $('img').animate(
+            { left: '+=78px', top: '-=109px' },
+            5000,
+            function() {
+              //script for movement from 9 to 10
+
+              $('img').animate(
+                { left: '+=138px', top: '-=233px' },
+                5000,
+                function() {
+                  //script for movement from 10 to 12
+
+                  $('img').animate(
+                    { left: '+=145px', top: '+=099px' },
+                    5000,
+                    function() {
+                      //script for movement from 12 to 18(i.e the end point)
+                      $('img').animate(
+                        { left: '+=86px', top: '+=69px' },
+                        5000,
+                        function() {}
+                      );
+                    }
+                  );
+                }
+              );
+            }
+          );
+        });
+      });
+    });
+  */
+
+
+
+A copy of this frontend lies in bootstrap test folder
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
