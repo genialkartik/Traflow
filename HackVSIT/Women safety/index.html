@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        function onReady(callback) {
+        var intervalId = window.setInterval(function() {
+            if (document.getElementsByTagName('body')[0] !== undefined) {
+            window.clearInterval(intervalId);
+            callback.call(this);
+            }
+        }, 1000);
+        }
+
+        function setVisible(selector, visible) {
+        document.querySelector(selector).style.display = visible ? 'block' : 'none';
+        }
+
+        onReady(function() {
+        setVisible('.page', true);
+        setVisible('#load', false);
+        });
+    </script>
+    <title>Save Me</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .center{
+            color: red;
+            position: absolute;
+            top: 50%;left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .center a{
+            border: 3px solid red;
+            border-radius: 10px;
+            color:red;
+            background-color: #fff;
+            font-size: 18px;font-weight: 600;
+            text-decoration: none;
+            padding: 10px 20px;
+            animation: 1s anim infinite;
+        }
+        @keyframes anim{
+            0%{color: red;background-color: white;border-color: red;}
+            50%{color: red;background-color: white;border-color: red;}
+            51%{color: #000;background-color: #f00;border-color: #000;}
+            100%{color: #000;background-color: #f00;border-color: #000;}
+        }
+        .center a:hover{
+            border-color: black;
+            color: black;
+            background: red;
+            transition: 1s ease;
+        }
+        .back-img img{
+            width: 100%;
+            height: 100vh;
+        }
+        .animload{
+            margin: 0 auto;
+            max-width: 600px;
+        }
+        .loadmode{
+            text-align:center;
+        }
+        .loadtext{
+            color:#000;
+            font-size:25px;
+            font-weight:700;
+        }
+        #load{
+            width: 100vw;height: 100vh;
+            background-color: #ffe3a8;
+        }
+        .page{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <div id="load">
+        <div class="animload">
+            <img width="600px" height="500px" src="https://s14-eu5.startpage.com/cgi-bin/serveimage?url=https%3A%2F%2Fcdn.dribbble.com%2Fusers%2F270818%2Fscreenshots%2F2463806%2Fblood-brother.gif&sp=c5d585613b99d8777534587bcca4dd9c&anticache=576674" alt="animation">
+        </div>
+        <div class="loadmode">
+            <span class="loadtext">Loading...</span>
+        </div>
+    </div>
+    <div class="page">
+        <div class="center">
+            <a id="myButton" href="javascript:void(0);">Help Me</a>
+        </div>
+        <div class="back-img">
+            <img src="https://s14-eu5.startpage.com/cgi-bin/serveimage?url=https:%2F%2Fwww.itl.cat%2Fpngfile%2Fbig%2F102-1029229_back-to-83-sad-anime-girl-wallpapers-hd.jpg&sp=305bf15c4b581867cf23d37b205ca8bb" alt="Save Me">
+        </div>
+    </div>
+    
+</body>
+<script>
+    console.log('Client-side code running');
+
+const button = document.getElementById('myButton');
+button.addEventListener('click', function(e) {
+  console.log('button was clicked');
+
+  fetch('/clicked', {method: 'POST'})
+    .then(function(response) {
+      if(response.ok) {
+        console.log('Click was recorded');
+        return;
+      }
+      throw new Error('Request failed.');
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
+});
+    </script>
+</html>
