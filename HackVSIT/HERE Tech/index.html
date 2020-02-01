@@ -1,0 +1,139 @@
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js"
+    type="text/javascript" charset="utf-8"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js"
+    type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+  </head>
+  <body>
+    <div style="width: 640px; height: 480px" id="mapContainer"></div>
+    <script>
+      
+
+// Instantiate a map and platform object:
+var platform = new H.service.Platform({
+  'apikey': 'BN5EcjwV_LuE_ToaZYO9Oi4VN_tiXa5ptb2fFtydgKk'
+});
+// Retrieve the target element for the map:
+var targetElement = document.getElementById('mapContainer');
+
+// Get the default map types from the platform object:
+var defaultLayers = platform.createDefaultLayers();
+
+// Instantiate the map:
+var map = new H.Map(
+  document.getElementById('mapContainer'),
+  defaultLayers.vector.normal.map,
+  {
+    zoom: 15,
+    center: { lat: 52.51, lng: 13.4 }
+  });
+// Create the parameters for the routing request:
+var routingParameter = {
+  // The routing mode:
+  'mode': 'fastest;car',
+  // The start point of the route:
+  'waypoint0': '52.52,13.5',
+  // The end   point of the route:
+  'waypoint1': '52.50,13.3',
+  // To retrieve the shape of the route we choose the route
+  // representation mode 'display'
+  'representation': 'display'
+};
+var routingParameter1 = {
+  // The routing mode:
+  'mode': 'fastest;car',
+  // The start point of the route:
+  'waypoint0': '52.52,13.5',
+  'waypoint7': '52.519,13.43',
+  'waypoint2': '52.517,13.4',
+  'waypoint3': '52.515,13.39',
+  'waypoint4': '52.513,13.34',
+  'waypoint5': '52.512,13.32',
+  'waypoint6': '52.511,13.31',
+  'waypoint1': '52.50,13.3',
+  // To retrieve the shape of the route we choose the route
+  // representation mode 'display'
+  'representation': 'display'
+};
+// Define a callback function to process the routing response:
+var onResult = function(result) {
+  var route,
+    routeShape,
+    startPoint,
+    endPoint,
+    linestring;
+  if(result.response.route) {
+  route = result.response.route[0];
+  routeShape = route.shape;
+  linestring = new H.geo.LineString();
+  routeShape.forEach(function(point) {
+    var parts = point.split(',');
+    linestring.pushLatLngAlt(parts[0], parts[1]);
+  });
+  startPoint = route.waypoint[0].mappedPosition;
+  endPoint = route.waypoint[1].mappedPosition;
+  var routeline = new H.map.Polyline(linestring, {
+    style: { strokeColor: 'blue', lineWidth: 3 }
+  });
+  var startMarker = new H.map.Marker({
+    lat: startPoint.latitude,
+    lng: startPoint.longitude
+  });
+  var endMarker = new H.map.Marker({
+    lat: endPoint.latitude,
+    lng: endPoint.longitude
+  });
+  map.addObjects([routeline, startMarker, endMarker]);
+  map.getViewModel().setLookAtData({bounds: routeline.getBoundingBox()});
+  }
+};
+/*var onResult1 = function(result1) {
+  var route1,
+    routeShape1,
+    startPoint1,
+    endPoint1,
+    linestring1;
+  if(result1.response.route1) {
+  route1 = result1.response.route1[0];
+  routeShape1 = route1.shape;
+  linestring1 = new H.geo.LineString();
+  routeShape1.forEach(function(point) {
+    var parts = point.split(',');
+    linestring1.pushLatLngAlt(parts[0], parts[1]);
+  });
+  startPoint1 = route1.waypoint[0].mappedPosition;
+  endPoint1 = route1.waypoint[1].mappedPosition;
+  var routeline1 = new H.map.Polyline(linestring1, {
+    style: { strokeColor: 'red', lineWidth: 3 }
+  });
+  var startMarker1 = new H.map.Marker({
+    lat: startPoint1.latitude,
+    lng: startPoint1.longitude
+  });
+  var endMarker1 = new H.map.Marker({
+    lat: endPoint1.latitude,
+    lng: endPoint1.longitude
+  });
+  map.addObjects([routeline1, startMarker1, endMarker1]);
+  map.getViewModel().setLookAtData({bounds: routeline1.getBoundingBox()});
+  }
+};*/
+var router = platform.getRoutingService();
+router.calculateRoute(routingParameter, onResult,
+  function(error) {
+    alert(error.message);
+  });
+  router.calculateRoute(routingParameter1, onResult,
+ 
+  function(error) {
+    alert(error.message);
+ });
+    </script>
+  </body>
+</html>
+
