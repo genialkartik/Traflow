@@ -1,8 +1,0 @@
-RFID_NO       Name on which RFID is issued          Vehicle_detail         Status           Speed_during_brakage Fee_status
-2765          Vikas M Sharma                        Black Mate Ferrari     Working          80			 Not_paid
-
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-					Last Month
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-2636	      Manjeet Maan                          Maruti,Blue            Working          80                   Paid
