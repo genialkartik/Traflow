@@ -1,7 +1,0 @@
-RFID_NO       Name on which RFID is issued         Vehicle_details         Status           Avg_speed_this_month   Warnings
-1005	      Kartik Tyagi			   Nisaan,Blue		  Working Fine	    45                	   Not_yet
-4452	      Harsh Bajpai			   Lamborghini,red        Working           70                     2TM
-2514	      Madan Lal                            Ferrari,Green	  Working           65			   Not_yet
-2765	      Vikas M Sharma			   Black Mate Ferari      Working           80			   5
-1223          Gaurav Singhal                       BMW,Blue               Working           50                     Not_yet
-               
