@@ -1,6 +1,6 @@
 # Traflow
 A project to control the traffice as well as to minimize the chance of its occurance.
-Help to find shortest effective (minimum traffic, no road blockage, etc) path from origin to destination.
+Help to find shortest and effective (minimum traffic, no road blockage, etc) path from origin to destination.
 Prevent the chance of Traffic Accidents.
 Help in Women Safety.
 Vehicle chasing.
