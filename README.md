@@ -1,6 +1,6 @@
 # Traflow
 A project to control the traffice as well as to minimize the chance of its occurance.
-Help to find shortest effective (minimum traffic, no road blockage, etc) path from origin to destination.
+Help to find shortest and effective (minimum traffic, no road blockage, etc) path from origin to destination.
 Prevent the chance of Traffic Accidents.
 Help in Women Safety.
 Vehicle chasing.
@@ -19,6 +19,6 @@ Vehicle chasing.
 ![HackPCBT_08](https://user-images.githubusercontent.com/32240906/94035649-f8639980-fde0-11ea-918b-30922eba674c.jpg)
 ![HackPCBT_09](https://user-images.githubusercontent.com/32240906/94035652-f994c680-fde0-11ea-9583-57612dedafe4.jpg)
 
-### Purpose & Intuitive minds behind the project:
+### Purpose & Intuitive minds behind the project :
 This project is developed during HackVSIT Hackathon, New Delhi. <br>
 Teammates: [Madan Lal](github.com/NorinMp143) | [Harsh Bajpai](https://github.com/bajpai244/) | [Vikas M. Sharma](https://github.com/VikasSharma1729)
