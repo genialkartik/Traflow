@@ -3,7 +3,7 @@ A project to control the traffice as well as to minimize the chance of its occur
 Help to find shortest and effective (minimum traffic, no road blockage, etc) path from origin to destination.
 Prevent the chance of Traffic Accidents.
 Help in Women Safety.
-Vehicle chasing.
+Vehicle chasing.  
 
 ## Shortest Effective path:
 ![Presentation1](https://user-images.githubusercontent.com/32240906/94035664-fe597a80-fde0-11ea-9342-9ea443bcfeed.gif)
